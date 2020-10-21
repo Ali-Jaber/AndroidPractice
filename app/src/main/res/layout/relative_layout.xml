@@ -20,7 +20,7 @@
         android:inputType="textPersonName"
         android:layout_below="@id/img_logo"
         android:layout_centerHorizontal="true"
-        android:hint="Full Name"
+        android:hint="@string/full_name"
         android:textSize="22sp"
         android:padding="12dp"
         android:layout_margin="16dp"/>
@@ -33,7 +33,7 @@
         android:inputType="textPersonName"
         android:layout_below="@+id/et_username"
         android:layout_centerHorizontal="true"
-        android:hint="Username"
+        android:hint="@string/username"
         android:padding="12dp"
         android:textSize="22sp"
         android:layout_margin="16dp"/>
@@ -49,7 +49,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:padding="10dp"
-        android:hint="password"
+        android:hint="@string/password"
         android:textSize="22sp"
         android:inputType="textPassword" />
 
@@ -69,21 +69,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Male" />
+            android:text="@string/male" />
 
         <RadioButton
             android:id="@+id/eb_female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Female" />
+            android:text="@string/female" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btn_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="@string/clear"
         android:background="@color/colorAccent"
         android:textColor="@android:color/white"
         android:layout_below="@+id/rg"
@@ -102,7 +102,7 @@
         android:layout_below="@id/rg"
         android:layout_margin="8dp"
         android:layout_toLeftOf="@id/btn_clear"
-        android:text="Register"
+        android:text="@string/register"
         android:textSize="22sp"
         android:padding="8dp"
         android:textColor="@android:color/white"

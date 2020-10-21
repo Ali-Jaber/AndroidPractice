@@ -21,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Change This Text Style\nUsing Toolbar Menu"
-        android:textSize="35dp"
+        android:text="@string/change_text"
+        android:textSize="35sp"
         android:gravity="center"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed" />

@@ -13,46 +13,46 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button One" />
+            android:text="@string/button_one" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Two" />
+            android:text="@string/button_two" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Three" />
+            android:text="@string/button_three" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Four" />
+            android:text="@string/button_four" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Five" />
+            android:text="@string/button_five" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Six" />
+            android:text="@string/button_six" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Seven" />
+            android:text="@string/button_seven" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Eight" />
+            android:text="@string/button_eight" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Nine" />
+            android:text="@string/button_nine" />
     </LinearLayout>
 </HorizontalScrollView>

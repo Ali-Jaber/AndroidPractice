@@ -11,8 +11,10 @@ import com.android.practice.practice.R
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class CustomAdapter(val myList: ArrayList<User>) :
+class CustomAdapter<T> :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+
+    private val myList = ArrayList<User>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
@@ -33,12 +35,29 @@ class CustomAdapter(val myList: ArrayList<User>) :
         holder.addPost.setOnClickListener {
             addItem(position,infoUser)
         }
+
+        holder.removePost.setOnClickListener {
+            addItem(position,infoUser)
+        }
     }
 
     private fun addItem(position: Int, infoUser: User) {
         myList.add(position,infoUser)
         notifyItemInserted(position)
         notifyItemRangeChanged(position,myList.size)
+    }
+
+    private fun addItem(infoUser: User) {
+        myList.add(infoUser)
+        notifyDataSetChanged()
+    }
+
+    fun addAll(users: List<User>) {
+        myList.addAll(users)
+    }
+
+    fun clear() {
+        myList.clear()
     }
 
     private fun removeItem(position: Int) {

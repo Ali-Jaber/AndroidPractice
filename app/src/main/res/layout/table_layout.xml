@@ -11,7 +11,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="A"
+            android:text="@string/a"
             android:padding="16dp"
             android:background="@android:color/holo_red_light"
             android:textColor="@android:color/white"
@@ -34,7 +34,7 @@
             android:background="@android:color/holo_blue_dark"
             android:gravity="center"
             android:padding="16dp"
-            android:text="B"
+            android:text="@string/b"
             android:textColor="@android:color/white"
             android:textSize="55sp"
             android:layout_margin="4dp"/>
@@ -47,7 +47,7 @@
             android:background="@android:color/holo_green_light"
             android:gravity="center"
             android:padding="16dp"
-            android:text="C"
+            android:text="@string/c"
             android:textColor="@android:color/white"
             android:textSize="55sp"
             android:layout_margin="4dp"/>
@@ -60,7 +60,7 @@
             android:background="@android:color/black"
             android:gravity="center"
             android:padding="16dp"
-            android:text="D"
+            android:text="@string/d"
             android:textColor="@android:color/white"
             android:textSize="55sp"
             android:layout_margin="4dp"/>
@@ -81,7 +81,7 @@
             android:background="@android:color/darker_gray"
             android:gravity="center"
             android:padding="16dp"
-            android:text="E"
+            android:text="@string/e"
             android:textColor="@android:color/white"
             android:textSize="55sp"
             android:layout_span="2"/>
@@ -95,7 +95,7 @@
             android:background="@android:color/holo_orange_light"
             android:gravity="center"
             android:padding="16dp"
-            android:text="F"
+            android:text="@string/f"
             android:textColor="@android:color/white"
             android:textSize="55sp" />
     </TableRow>
@@ -128,7 +128,7 @@
             android:background="@android:color/holo_purple"
             android:gravity="center"
             android:padding="16dp"
-            android:text="H"
+            android:text="@string/h"
             android:textColor="@android:color/white"
             android:textSize="55sp"
             android:layout_span="2"/>
@@ -148,7 +148,7 @@
             android:background="@android:color/holo_red_light"
             android:gravity="center"
             android:padding="16dp"
-            android:text="A"
+            android:text="@string/a"
             android:textColor="@android:color/white"
             android:textSize="55sp" />
     </TableRow>

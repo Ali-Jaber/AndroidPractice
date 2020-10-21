@@ -19,7 +19,8 @@
             android:fitsSystemWindows="true"
             app:expandedTitleMarginStart="40dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="Collapsing Toolbar">
+            app:title="Collapsing Toolbar"
+            app:contentScrim="@color/colorPrimary">
 
             <ImageView
                 android:layout_width="match_parent"

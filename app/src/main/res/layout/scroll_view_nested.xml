@@ -28,9 +28,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:background="@color/colorPrimary"
-                android:text="Nested Scroll View "
+                android:text="@string/nested_scroll_view"
                 android:textColor="#ffffff"
-                android:textSize="32dp" />
+                android:textSize="32sp" />
 
             <!-- showing random text 2 from strings.xml file -->
             <TextView

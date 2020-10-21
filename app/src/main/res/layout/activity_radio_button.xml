@@ -8,9 +8,11 @@
     android:orientation="vertical"
     tools:context=".RadioButton">
 
+    <include layout="@layout/toolbar" />
+
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="25dp"/>
+        android:paddingStart="25dp" />
 </LinearLayout>
