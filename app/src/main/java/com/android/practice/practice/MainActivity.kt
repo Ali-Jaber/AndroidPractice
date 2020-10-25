@@ -4,9 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.android.practice.practice.Notifications.MyNotifications
-import com.android.practice.practice.RecyclerView.UserRecyclerView
+import com.android.practice.practice.recyclerview.UserRecyclerView
 import com.android.practice.practice.alertdialog.CustomAlertDialog
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
+import com.android.practice.practice.fragment.MainFragment
+import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
 import com.android.practice.practice.spinner.SpinnerMain
 import kotlinx.android.synthetic.main.activity_main.*
@@ -82,8 +84,17 @@ class MainActivity : AppCompatActivity() {
         btn16.setOnClickListener {
             startActivity(Intent(this, CustomAlertDialog::class.java))
         }
+
         btn17.setOnClickListener {
             startActivity(Intent(this, MyNotifications::class.java))
+        }
+
+        btn18.setOnClickListener {
+            startActivity(Intent(this, MainFragment::class.java))
+        }
+
+        btn19.setOnClickListener {
+            startActivity(Intent(this, MainTransferFragment::class.java))
         }
     }
 }

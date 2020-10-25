@@ -10,49 +10,49 @@
 
     <Button
         android:id="@+id/btSimpleAlert"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/simple_alert" />
 
     <Button
         android:id="@+id/btMultipleChoices"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/multiple_choices" />
 
     <Button
         android:id="@+id/btListOfItems"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/list_of_items" />
 
     <Button
         android:id="@+id/btCustomLayout"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/custom_layout" />
 
     <Button
         android:id="@+id/btContainsEditText"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/contains_edittext" />
 
     <Button
         android:id="@+id/btBottomSheetDialog"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/one_hundred_fifty"
+        android:layout_height="@dimen/fifty_dp"
+        android:paddingTop="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/four_dp"
         android:text="@string/bottom_sheet_dialog" />
 </LinearLayout>

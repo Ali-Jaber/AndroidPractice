@@ -1,4 +1,4 @@
-package com.android.practice.practice.RecyclerView
+package com.android.practice.practice.recyclerview
 
 import android.view.LayoutInflater
 import android.view.View

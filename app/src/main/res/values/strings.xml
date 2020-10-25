@@ -121,4 +121,10 @@
     <string name="scrollview">ScrollView</string>
     <string name="welcome_to_android">Welcome to Android</string>
     <string name="h">H</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment">Fragment</string>
+    <string name="fragment_y">Fragment y</string>
+    <string name="fragment_x">Fragment x</string>
+    <string name="from_activity_to_fragment">Send from Activity to Fragment</string>
 </resources>

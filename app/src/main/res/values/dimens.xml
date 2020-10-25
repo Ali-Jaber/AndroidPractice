@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_notif">15sp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="four_dp">4dp</dimen>
+    <dimen name="fifty_dp">50dp</dimen>
+    <dimen name="one_hundred_fifty">150dp</dimen>
+    <dimen name="collapsing_bar_height">256dp</dimen>
+    <dimen name="collapsing_toolbar_margin_start">40dp</dimen>
+    <dimen name="group_menu_text_size">35sp</dimen>
+    <dimen name="main_nested_scroll_view_width">409dp</dimen>
+    <dimen name="main_nested_scroll_view_height">729dp</dimen>
+    <dimen name="radio_group_padding_start">25dp</dimen>
+    <dimen name="spinner_width">409dp</dimen>
+    <dimen name="bottom_sheet_margin_start">5dp</dimen>
+    <dimen name="bottom_sheet_text_size">25sp</dimen>
+    <dimen name="autocomplete_image_width">60dp</dimen>
+    <dimen name="autocomplete_image_height">40dp</dimen>
+    <dimen name="custom_spinner_width">40dp</dimen>
+    <dimen name="custom_spinner_height">40dp</dimen>
+    <dimen name="custom_spinner_text_size">20sp</dimen>
+    <dimen name="dialog_custom_text_view_height_1">80dp</dimen>
+    <dimen name="dialog_custom_text_size_1">20sp</dimen>
+    <dimen name="dialog_custom_text_margin_top_2">40dp</dimen>
+    <dimen name="dialog_custom_text_margin_bottom_2">40dp</dimen>
+    <dimen name="dialog_custom_text_size_2">16sp</dimen>
+</resources>

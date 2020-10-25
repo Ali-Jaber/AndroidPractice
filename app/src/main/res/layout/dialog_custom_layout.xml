@@ -6,21 +6,21 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/dialog_custom_text_view_height_1"
         android:background="@drawable/ic_launcher_background"
         android:gravity="center"
         android:text="@string/custom_dialog"
         android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        android:textSize="@dimen/dialog_custom_text_size_1" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="@dimen/dialog_custom_text_margin_top_2"
+        android:layout_marginBottom="@dimen/dialog_custom_text_margin_bottom_2"
         android:gravity="center"
         android:text="@string/custom_dialog_message"
-        android:textSize="16sp" />
+        android:textSize="@dimen/dialog_custom_text_size_2" />
 
     <View
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
     <Button
         android:id="@+id/btDismissCustomDialog"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/fifty_dp"
         android:background="?selectableItemBackground"
         android:text="@string/dismiss" />
 </LinearLayout>

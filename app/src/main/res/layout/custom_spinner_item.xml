@@ -2,16 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:padding="@dimen/eight_dp">
 
-    <ImageView android:layout_width="40dp"
-        android:layout_height="40dp"
+    <ImageView android:layout_width="@dimen/custom_spinner_width"
+        android:layout_height="@dimen/custom_spinner_height"
         android:id="@+id/img"
         android:contentDescription="@string/app_name"/>
 
     <TextView android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="@dimen/custom_spinner_text_size"
         android:paddingStart="10dp"
         android:layout_gravity="center_vertical"
         android:id="@+id/text"/>

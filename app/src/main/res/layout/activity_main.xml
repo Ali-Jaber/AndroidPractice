@@ -7,8 +7,8 @@
     tools:context=".MainActivity">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="@dimen/main_nested_scroll_view_width"
+        android:layout_height="@dimen/main_nested_scroll_view_height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,9 +22,9 @@
                 android:id="@+id/btn1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/list_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -35,9 +35,9 @@
                 android:id="@+id/btn2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/recycler_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -46,9 +46,9 @@
                 android:id="@+id/btn3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/collapsing"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -57,126 +57,144 @@
                 android:id="@+id/btn4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/drawer" />
 
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/menu_group" />
 
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/radio_button" />
 
             <Button
                 android:id="@+id/btn7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/spinner" />
 
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/table_layout" />
 
             <Button
                 android:id="@+id/btn12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/linear_layout" />
 
             <Button
                 android:id="@+id/btn13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/relative_layout" />
 
             <Button
                 android:id="@+id/btn14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/coordinator_layout" />
 
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/scroll_vertical" />
 
             <Button
                 android:id="@+id/btn10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/scroll_horizontal" />
 
             <Button
                 android:id="@+id/btn11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/scroll_nested" />
 
             <Button
                 android:id="@+id/btn15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/auto_complete_text" />
             <Button
                 android:id="@+id/btn16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/alter_dialog" />
 
             <Button
                 android:id="@+id/btn17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/eight_dp"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/eight_dp"
                 android:text="@string/notifications" />
+
+            <Button
+                android:id="@+id/btn18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:gravity="center"
+                android:padding="@dimen/eight_dp"
+                android:text="@string/fragment" />
+
+            <Button
+                android:id="@+id/btn19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:gravity="center"
+                android:padding="@dimen/eight_dp"
+                android:text="@string/from_activity_to_fragment" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

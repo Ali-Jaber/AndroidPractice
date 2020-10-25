@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/change_text"
-        android:textSize="35sp"
+        android:textSize="@dimen/group_menu_text_size"
         android:gravity="center"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed" />

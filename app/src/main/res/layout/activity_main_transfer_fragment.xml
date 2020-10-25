@@ -2,17 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayoutRadio"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RadioButton">
+    tools:context=".fragment.transferdata.MainTransferFragment">
 
-    <include layout="@layout/toolbar" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <RadioGroup
-        android:id="@+id/rg"
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.android.practice.practice.fragment.transferdata.NameFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/radio_group_padding_start" />
+        android:layout_weight="1"/>
 </LinearLayout>
