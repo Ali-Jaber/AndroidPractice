@@ -8,6 +8,8 @@ import com.android.practice.practice.recyclerview.UserRecyclerView
 import com.android.practice.practice.alertdialog.CustomAlertDialog
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
 import com.android.practice.practice.fragment.MainFragment
+import com.android.practice.practice.fragment.fragmenttofragment.FragmentToFragment
+import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
 import com.android.practice.practice.spinner.SpinnerMain
@@ -95,6 +97,14 @@ class MainActivity : AppCompatActivity() {
 
         btn19.setOnClickListener {
             startActivity(Intent(this, MainTransferFragment::class.java))
+        }
+
+        btn20.setOnClickListener {
+            startActivity(Intent(this, FragmentToFragment::class.java))
+        }
+
+        btn21.setOnClickListener {
+            startActivity(Intent(this, FragmentToolBar::class.java))
         }
     }
 }

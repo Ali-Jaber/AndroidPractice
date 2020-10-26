@@ -1,5 +1,7 @@
 package com.android.practice.practice.recyclerview
 
+import CustomAdapter
+import ViewHolder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,8 +30,30 @@ class UserRecyclerView : AppCompatActivity() {
         )
 
         myRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val customAdapter = CustomAdapter<User>()
-        customAdapter.addAll(users)
+        val customAdapter = object : CustomAdapter<User, ViewHolder>() {
+            override fun createVm(parent: ViewGroup, viewType: Int): ViewHolder {
+                val view =
+                    LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
+                return ViewHolder(view)
+            }
+
+            override fun bindVm(holder: ViewHolder, position: Int, item: User) {
+                holder.username.text = item.userName
+                holder.timesAgo.text = item.timeAgo
+                holder.userPhoto.setImageResource(item.userPhoto)
+                holder.postPhoto.setImageResource(item.postPhoto)
+                holder.addPost.setOnClickListener {
+                    removeItem(position)
+                }
+                holder.addPost.setOnClickListener {
+                    addItem(position, item)
+                }
+                holder.removePost.setOnClickListener {
+                    addItem(position, item)
+                }
+            }
+        }
         myRecyclerView.adapter = customAdapter
+        customAdapter.addAll(users)
     }
 }

@@ -1,6 +1,3 @@
-package com.android.practice.practice.recyclerview
-
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
@@ -9,74 +6,45 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.android.practice.practice.R
 import de.hdodenhof.circleimageview.CircleImageView
-import kotlinx.android.synthetic.main.item_list.view.*
-
-class CustomAdapter<T> :
-    RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
-
-    private val myList = ArrayList<User>()
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
-        return ViewHolder(view)
+abstract class CustomAdapter<T, VM : RecyclerView.ViewHolder> :
+    RecyclerView.Adapter<VM>() {
+    private val myList = ArrayList<T>()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VM =
+        createVm(parent, viewType)
+    override fun onBindViewHolder(holder: VM, position: Int) {
+        bindVm(holder, position, myList[position])
     }
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val infoUser = myList[position]
-        holder.username.text = infoUser.userName
-        holder.timesAgo.text = infoUser.timeAgo
-        holder.userPhoto.setImageResource(infoUser.userPhoto)
-        holder.postPhoto.setImageResource(infoUser.postPhoto)
-
-        holder.addPost.setOnClickListener {
-            removeItem(position)
-        }
-
-        holder.addPost.setOnClickListener {
-            addItem(position,infoUser)
-        }
-
-        holder.removePost.setOnClickListener {
-            addItem(position,infoUser)
-        }
-    }
-
-    private fun addItem(position: Int, infoUser: User) {
-        myList.add(position,infoUser)
+    abstract fun createVm(parent: ViewGroup, viewType: Int): VM
+    abstract fun bindVm(holder: VM, position: Int, item: T)
+    fun addItem(position: Int, infoUser: T) {
+        myList.add(position, infoUser)
         notifyItemInserted(position)
-        notifyItemRangeChanged(position,myList.size)
+        notifyItemRangeChanged(position, myList.size)
     }
-
-    private fun addItem(infoUser: User) {
+    fun addItem(infoUser: T) {
         myList.add(infoUser)
         notifyDataSetChanged()
     }
-
-    fun addAll(users: List<User>) {
+    fun addAll(users: List<T>) {
         myList.addAll(users)
     }
-
     fun clear() {
         myList.clear()
     }
-
-    private fun removeItem(position: Int) {
+    fun removeItem(position: Int) {
         myList.removeAt(position)
         notifyItemRemoved(position)
-        notifyItemRangeChanged(position,myList.size)
+        notifyItemRangeChanged(position, myList.size)
     }
-
     override fun getItemCount(): Int {
         return myList.size
     }
-
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val username = itemView.findViewById<TextView>(R.id.username)
-        val userPhoto = itemView.findViewById<CircleImageView>(R.id.userPhoto)
-        val timesAgo = itemView.findViewById<TextView>(R.id.timesAgo)
-        val postPhoto = itemView.findViewById<ImageView>(R.id.image_post)
-        val addPost = itemView.findViewById<ImageButton>(R.id.addPost)
-        val removePost = itemView.findViewById<ImageButton>(R.id.removePost)
-
-    }
+}
+class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val username = itemView.findViewById<TextView>(R.id.username)
+    val userPhoto = itemView.findViewById<CircleImageView>(R.id.userPhoto)
+    val timesAgo = itemView.findViewById<TextView>(R.id.timesAgo)
+    val postPhoto = itemView.findViewById<ImageView>(R.id.image_post)
+    val addPost = itemView.findViewById<ImageButton>(R.id.addPost)
+    val removePost = itemView.findViewById<ImageButton>(R.id.removePost)
 }

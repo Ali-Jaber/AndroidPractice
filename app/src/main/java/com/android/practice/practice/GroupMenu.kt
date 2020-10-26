@@ -8,6 +8,7 @@ import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
+import java.util.*
 
 lateinit var myTextView: TextView
 
@@ -15,6 +16,7 @@ class GroupMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_menu)
+        setSupportActionBar(findViewById(R.id.toolbar))
         myTextView = findViewById(R.id.tv)
     }
 

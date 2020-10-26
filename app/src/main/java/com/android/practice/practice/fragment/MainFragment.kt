@@ -7,6 +7,8 @@ import android.widget.Button
 import com.android.practice.practice.R
 
 class MainFragment : AppCompatActivity() {
+    private val fm = supportFragmentManager
+    private val ft = fm.beginTransaction()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_fragment)
@@ -16,24 +18,23 @@ class MainFragment : AppCompatActivity() {
 
         btnX.setOnClickListener {
             View.OnClickListener {
-                val fm = supportFragmentManager
-                val ft = fm.beginTransaction()
                 val xFragment = XFragment()
-                ft.replace(R.id.fragment_container, xFragment)
-                ft.addToBackStack(null)
-                ft.commit()
+                setupFragment()
             }
         }
 
         btnY.setOnClickListener {
             View.OnClickListener {
-                val fm = supportFragmentManager
-                val ft = fm.beginTransaction()
                 val yFragment = YFragment()
-                ft.replace(R.id.fragment_container, yFragment)
-                ft.addToBackStack(null)
-                ft.commit()
+                setupFragment()
             }
         }
+    }
+
+    private fun setupFragment() {
+        val xFragment = XFragment()
+        ft.replace(R.id.fragment_container, xFragment)
+        ft.addToBackStack(null)
+        ft.commit()
     }
 }

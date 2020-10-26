@@ -11,6 +11,7 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
 
     private val inflater: LayoutInflater =
         context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+    private val countryFull = ArrayList<CountryItem>()
     private val countrys = ArrayList<CountryItem>()
 
     override fun getFilter(): Filter {
@@ -18,11 +19,16 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
             override fun performFiltering(constraint: CharSequence?): FilterResults {
                 val result = FilterResults()
                 val suggestions = ArrayList<CountryItem>()
-                if(constraint == null || constraint.isEmpty()) {
-                    suggestions.addAll(countrys)
+                if (constraint == null || constraint.isEmpty()) {
+                    suggestions.addAll(countryFull)
                 } else {
-                    val filterPattern = constraint.toString().toLowerCase().trim()
-                    val filteredCountry = countrys.filter { countryItem -> countryItem.countryName.toLowerCase().contains(filterPattern) }
+                    val filterPattern = constraint.toString().trim()
+                    val filteredCountry = countryFull.filter { countryItem ->
+                        countryItem.countryName.contains(
+                            filterPattern,
+                            true
+                        )
+                    }
                     suggestions.addAll(filteredCountry)
                 }
                 result.values = suggestions
@@ -31,8 +37,8 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                clear()
-                addAll(results?.values as List<CountryItem>)
+                countrys.clear()
+                countrys.addAll(results?.values as List<CountryItem>)
                 notifyDataSetChanged()
             }
 
@@ -41,9 +47,11 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
             }
         }
     }
-//    val countryFilter = object : Filter() {
+
+    //    val countryFilter = object : Filter() {
 //    }
     fun addAll(county: List<CountryItem>) {
+        this.countryFull.addAll(county)
         this.countrys.addAll(county)
     }
 
@@ -78,7 +86,11 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
             countryView = convertView
         }
         val country = countrys[position]
-        val resourceId = context.resources.getIdentifier(country.flagImage.toString(),"drawable",context.packageName)
+        val resourceId = context.resources.getIdentifier(
+            country.flagImage.toString(),
+            "drawable",
+            context.packageName
+        )
         viewHolder.flagName?.text = country.countryName
         viewHolder.flagImage?.setImageResource(resourceId)
 
