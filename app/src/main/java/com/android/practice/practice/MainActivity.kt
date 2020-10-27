@@ -13,6 +13,7 @@ import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
 import com.android.practice.practice.spinner.SpinnerMain
+import com.android.practice.practice.viewpager.MyPager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -105,6 +106,10 @@ class MainActivity : AppCompatActivity() {
 
         btn21.setOnClickListener {
             startActivity(Intent(this, FragmentToolBar::class.java))
+        }
+
+        btn22.setOnClickListener {
+            startActivity(Intent(this, MyPager::class.java))
         }
     }
 }

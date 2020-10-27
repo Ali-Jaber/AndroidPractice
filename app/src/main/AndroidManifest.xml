@@ -40,7 +40,8 @@
         <activity android:name=".fragment.transferdata.MainTransferFragment" />
         <activity android:name=".fragment.MainFragment" />
         <activity android:name=".fragment.fragmenttofragment.FragmentToFragment" />
-        <activity android:name=".fragment.toolbar.FragmentToolBar"/>
+        <activity android:name=".fragment.toolbar.FragmentToolBar" />
+        <activity android:name=".viewpager.MyPager"/>
 
     </application>
 

@@ -17,7 +17,7 @@ class AutoCompleteCountryAdapter(private val context: Context) : BaseAdapter(), 
     override fun getFilter(): Filter {
         return object : Filter() {
             override fun performFiltering(constraint: CharSequence?): FilterResults {
-                val result = FilterResults()
+                val result = FilterResults()    
                 val suggestions = ArrayList<CountryItem>()
                 if (constraint == null || constraint.isEmpty()) {
                     suggestions.addAll(countryFull)

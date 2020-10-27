@@ -133,4 +133,5 @@
     <string name="settings">settings</string>
     <string name="logout">logout</string>
     <string name="fragment_toolbar">fragment toolbar</string>
+    <string name="view_pager">View Pager</string>
 </resources>
