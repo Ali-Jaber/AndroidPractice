@@ -5,9 +5,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.android.practice.practice.Notifications.MyNotifications
 import com.android.practice.practice.recyclerview.UserRecyclerView
-import com.android.practice.practice.alertdialog.CustomAlertDialog
+import com.android.practice.practice.dialog.CustomAlertDialog
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
+import com.android.practice.practice.customview.MyCustomView
+import com.android.practice.practice.dialog.MyBottomSheet
 import com.android.practice.practice.fragment.MainFragment
+import com.android.practice.practice.fragment.dialog.MyDialogFragment
 import com.android.practice.practice.fragment.fragmenttofragment.FragmentToFragment
 import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
@@ -110,6 +113,18 @@ class MainActivity : AppCompatActivity() {
 
         btn22.setOnClickListener {
             startActivity(Intent(this, MyPager::class.java))
+        }
+
+        btn23.setOnClickListener {
+            startActivity(Intent(this, MyCustomView::class.java))
+        }
+
+        btn24.setOnClickListener {
+            startActivity(Intent(this, MyDialogFragment::class.java))
+        }
+
+        btn25.setOnClickListener {
+            startActivity(Intent(this, MyBottomSheet::class.java))
         }
     }
 }

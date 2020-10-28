@@ -25,14 +25,15 @@ class FirstFragment : Fragment() {
 
         val toolbar = rootView.findViewById<Toolbar>(R.id.fragment_toolbar)
 
-        toolbar.inflateMenu(R.menu.toolbar)
+        toolbar.inflateMenu(R.menu.fragment1_toolbar)
+//        inflater.inflate(R.menu.toolbar_options_menu, menu)
         toolbar.title = "First Fragment"
-        toolbar.setOnMenuItemClickListener {
-            if (it.itemId == R.id.settings) {
-                Toast.makeText(requireActivity(), "First Fragment", Toast.LENGTH_LONG).show()
-            }
-            true
-        }
+//        toolbar.setOnMenuItemClickListener {
+//            if (it.itemId == R.id.settings) {
+//                Toast.makeText(requireActivity(), "First Fragment", Toast.LENGTH_LONG).show()
+//            }
+//            true
+//        }
         communicator = activity as Communicator
         rootView.btnSend.setOnClickListener {
             communicator.passData(rootView.editText.text.toString())

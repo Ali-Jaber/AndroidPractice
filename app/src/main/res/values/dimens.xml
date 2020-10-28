@@ -24,4 +24,13 @@
     <dimen name="dialog_custom_text_margin_top_2">40dp</dimen>
     <dimen name="dialog_custom_text_margin_bottom_2">40dp</dimen>
     <dimen name="dialog_custom_text_size_2">16sp</dimen>
+    <dimen name="face_button_dimen">50dp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+
 </resources>

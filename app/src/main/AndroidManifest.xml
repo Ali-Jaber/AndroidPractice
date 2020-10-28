@@ -8,6 +8,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".fragment.fragmentinsidefragment.InsideFragment"></activity>
+        <activity android:name=".dialog.MyBottomSheet" />
+        <activity android:name=".customview.MyCustomView" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,15 +37,15 @@
         <activity android:name=".LinerLayout" />
         <activity android:name=".spinner.SpinnerMain" />
         <activity android:name=".autocompletetext.CountryAutoCompleteText" />
-        <activity android:name=".alertdialog.CustomAlertDialog" />
+        <activity android:name=".dialog.CustomAlertDialog" />
         <activity android:name=".Notifications.AfterNotification" />
         <activity android:name=".Notifications.MyNotifications" />
         <activity android:name=".fragment.transferdata.MainTransferFragment" />
         <activity android:name=".fragment.MainFragment" />
         <activity android:name=".fragment.fragmenttofragment.FragmentToFragment" />
         <activity android:name=".fragment.toolbar.FragmentToolBar" />
-        <activity android:name=".viewpager.MyPager"/>
-
+        <activity android:name=".viewpager.MyPager" />
+        <activity android:name=".fragment.dialog.MyDialogFragment" />
     </application>
 
 </manifest>

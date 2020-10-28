@@ -22,14 +22,14 @@ class SecondFrament : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_two, container, false)
         val toolbar = rootView.findViewById<Toolbar>(R.id.fragment_toolbar)
 
-        toolbar.inflateMenu(R.menu.toolbar)
+        toolbar.inflateMenu(R.menu.fragment2_toolbar)
         toolbar.title = "Second Fragment"
-        toolbar.setOnMenuItemClickListener {
-            if (it.itemId == R.id.settings) {
-                Toast.makeText(requireActivity(), "Second Fragment", Toast.LENGTH_LONG).show()
-            }
-            true
-        }
+//        toolbar.setOnMenuItemClickListener {
+//            if (it.itemId == R.id.settings) {
+//                Toast.makeText(requireActivity(), "Second Fragment", Toast.LENGTH_LONG).show()
+//            }
+//            true
+//        }
 
         inputText = arguments?.getString(ARG_PARAM1)
         rootView.outPutTextView.text = inputText

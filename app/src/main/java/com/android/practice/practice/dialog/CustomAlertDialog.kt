@@ -1,4 +1,4 @@
-package com.android.practice.practice.alertdialog
+package com.android.practice.practice.dialog
 
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity

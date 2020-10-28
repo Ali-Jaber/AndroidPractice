@@ -31,13 +31,13 @@ class FragmentWay : Fragment() {
         val view = inflater.inflate(R.layout.activity_fragment_tool_bar, container, false)
         val toolbar = view.findViewById<Toolbar>(R.id.fragment_toolbar)
 
-        toolbar.inflateMenu(R.menu.toolbar)
-        toolbar.setOnMenuItemClickListener {
-            if (it.itemId == R.id.settings) {
-                Toast.makeText(requireActivity(), "Awesome", Toast.LENGTH_LONG).show()
-            }
-            true
-        }
+        toolbar.inflateMenu(R.menu.fragment1_toolbar)
+//        toolbar.setOnMenuItemClickListener {
+//            if (it.itemId == R.id.settings) {
+//                Toast.makeText(requireActivity(), "Awesome", Toast.LENGTH_LONG).show()
+//            }
+//            true
+//        }
         return view
     }
 }

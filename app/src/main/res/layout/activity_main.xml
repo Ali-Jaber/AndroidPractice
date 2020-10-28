@@ -222,6 +222,32 @@
                 android:gravity="center"
                 android:padding="@dimen/eight_dp"
                 android:text="@string/view_pager" />
+
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:gravity="center"
+                android:padding="@dimen/eight_dp"
+                android:text="@string/custom_view" />
+
+            <Button
+                android:id="@+id/btn24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:gravity="center"
+                android:padding="@dimen/eight_dp"
+                android:text="@string/dialog_fragment" />
+            <Button
+                android:id="@+id/btn25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:gravity="center"
+                android:padding="@dimen/eight_dp"
+                android:text="@string/bottom_sheet" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

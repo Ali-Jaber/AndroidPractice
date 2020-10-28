@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/settings"-->
+<!--        android:title="@string/settings"/>-->
+<!--    <item-->
+<!--        android:id="@+id/logout"-->
+<!--        android:title="@string/logout"/>-->
+
+<!--    <item-->
+<!--        android:id="@+id/text_style"-->
+<!--        android:icon="@drawable/ic_palette_black"-->
+<!--        android:orderInCategory="1"-->
+<!--        android:title="Text Style"-->
+<!--        app:showAsAction="always|withText">-->
+
+<!--        <menu>-->
+<!--            <group-->
+<!--                android:id="@+id/text_color_group"-->
+<!--                android:checkableBehavior="single">-->
+<!--                <item-->
+<!--                    android:checkable="false"-->
+<!--                    android:enabled="false"-->
+<!--                    android:title="Select Text Color" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/red"-->
+<!--                    android:icon="@drawable/ic_palette_red"-->
+<!--                    android:onClick="onColorGroupItemClick"-->
+<!--                    android:title="Red" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/green"-->
+<!--                    android:icon="@drawable/ic_palette_green"-->
+<!--                    android:onClick="onColorGroupItemClick"-->
+<!--                    android:title="Green" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/blue"-->
+<!--                    android:icon="@drawable/ic_palette_blue"-->
+<!--                    android:onClick="onColorGroupItemClick"-->
+<!--                    android:title="Blue" />-->
+<!--            </group>-->
+
+<!--            <group-->
+<!--                android:id="@+id/text_size_group"-->
+<!--                android:checkableBehavior="single">-->
+
+<!--                <item-->
+<!--                    android:checkable="false"-->
+<!--                    android:enabled="false"-->
+<!--                    android:title="Select Text Size" />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/large_text"-->
+<!--                    android:title="Large"-->
+<!--                    android:icon="@drawable/ic_text_fields_black"-->
+<!--                    android:onClick="onSizeGroupItemClick"-->
+<!--                    />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/medium_text"-->
+<!--                    android:title="Medium"-->
+<!--                    android:icon="@drawable/ic_text_fields_black"-->
+<!--                    android:onClick="onSizeGroupItemClick"-->
+<!--                    />-->
+
+<!--                <item-->
+<!--                    android:id="@+id/small_text"-->
+<!--                    android:title="Small"-->
+<!--                    android:icon="@drawable/ic_text_fields_black"-->
+<!--                    android:onClick="onSizeGroupItemClick"-->
+<!--                    />-->
+<!--            </group>-->
+<!--        </menu>-->
+<!--    </item>-->
+
+    <item
+        android:id="@+id/text_bold"
+        android:title="Bold Text"
+        app:showAsAction="ifRoom|withText"
+        android:icon="@drawable/ic_text_fields_black"
+        android:orderInCategory="2"
+        />
+</menu>
