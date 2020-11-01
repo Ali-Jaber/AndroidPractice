@@ -9,4 +9,8 @@
     android:padding="8dp"
     tools:context=".fragment.fragmenttofragment.FragmentToFragment">
 
+    <include
+        android:id="@+id/fragment_to_fragment_toolbar"
+        layout="@layout/toolbar"/>
+
 </RelativeLayout>

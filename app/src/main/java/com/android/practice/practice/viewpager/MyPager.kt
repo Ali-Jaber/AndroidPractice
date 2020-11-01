@@ -1,18 +1,17 @@
 package com.android.practice.practice.viewpager
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 import com.google.android.material.tabs.TabLayout
 
-class MyPager : AppCompatActivity() {
+class MyPager : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_pager)
-        setSupportActionBar(findViewById(R.id.pager_toolbar))
-        title = "View Pager"
+        initToolbar()
         val tabLayout = findViewById<TabLayout>(R.id.main_tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.main_pager)
         val adapter = PagerAdapter(supportFragmentManager).apply {
@@ -59,5 +58,10 @@ class MyPager : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.pager_toolbar))
+        supportActionBar?.title = "View Pager"
     }
 }

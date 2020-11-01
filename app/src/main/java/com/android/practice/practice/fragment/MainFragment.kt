@@ -4,15 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 
-class MainFragment : AppCompatActivity() {
+class MainFragment : BaseActivity() {
     private val fm = supportFragmentManager
     private val ft = fm.beginTransaction()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_fragment)
-
+        initToolbar()
         val btnX = findViewById<Button>(R.id.main_btn_x)
         val btnY = findViewById<Button>(R.id.main_btn_y)
 
@@ -29,6 +30,11 @@ class MainFragment : AppCompatActivity() {
                 setupFragment()
             }
         }
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.main_fragment_toolbar))
+        supportActionBar?.title = "Fragment"
     }
 
     private fun setupFragment() {

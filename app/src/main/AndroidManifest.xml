@@ -8,7 +8,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.fragmentinsidefragment.InsideFragment"></activity>
+        <activity android:name=".sharedpreferences.preferencefragment.ShopMain"></activity>
+        <activity android:name=".sharedpreferences.preferencefragment.AddItemActivity" />
+        <activity android:name=".sharedpreferences.SharedPreferencesPractice" />
+        <activity android:name=".sharedpreferences.SharedPreferencesTwo" />
+        <activity android:name=".sharedpreferences.SharedPreferencesOne" />
+        <activity android:name=".customview.CustomViewMain" />
+        <activity android:name=".pages.Pages2" />
+        <activity android:name=".pages.PagesActivity" />
         <activity android:name=".dialog.MyBottomSheet" />
         <activity android:name=".customview.MyCustomView" />
         <activity android:name=".SplashScreen">
@@ -46,6 +53,7 @@
         <activity android:name=".fragment.toolbar.FragmentToolBar" />
         <activity android:name=".viewpager.MyPager" />
         <activity android:name=".fragment.dialog.MyDialogFragment" />
+        <activity android:name=".fragment.fragmentinsidefragment.InsideFragment" />
     </application>
 
 </manifest>

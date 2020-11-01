@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".Notifications.MyNotifications">
 
+    <include
+        android:id="@+id/notifications_toolbar"
+        layout="@layout/toolbar" />
+
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"

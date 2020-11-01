@@ -152,5 +152,28 @@
     <string name="bottom_sheet">Bottom Sheet</string>
     <string name="send_message_to_activity">Send Message To Activity</string>
     <string name="to_parent_fragment">Send Message to parent fragment</string>
-
+    <string name="fragment_inside_fragment">Fragment Inside Fragment</string>
+    <string name="pages">pages</string>
+    <string name="chat">Chat</string>
+    <string name="call">call</string>
+    <string name="chats">Chats</string>
+    <string name="calls">Calls</string>
+    <string name="status">Status</string>
+    <string name="make_call">Make call</string>
+    <string name="make_chat">Make Chat</string>
+    <string name="change_status">Change status</string>
+    <string name="submit">Submit</string>
+    <string name="save">save</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="restore">Restore</string>
+    <string name="email">Email</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="clear_found_items">Clear found item</string>
+    <string name="apples">apples</string>
+    <string name="_1">1</string>
+    <string name="plus_sign">+</string>
+    <string name="action_settings">Settings</string>
+    <string name="hide_count_1">Hide count of 1</string>
+    <string name="hide_count_1_description">When the count of an item is 1, hide the number in the list</string>
 </resources>

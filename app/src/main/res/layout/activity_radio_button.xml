@@ -8,7 +8,9 @@
     android:orientation="vertical"
     tools:context=".RadioButton">
 
-    <include layout="@layout/toolbar" />
+    <include
+        android:id="@+id/radio_group_toolbar"
+        layout="@layout/toolbar" />
 
     <RadioGroup
         android:id="@+id/rg"

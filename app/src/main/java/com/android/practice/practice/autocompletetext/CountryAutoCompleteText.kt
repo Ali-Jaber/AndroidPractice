@@ -3,18 +3,26 @@ package com.android.practice.practice.autocompletetext
 import android.os.Bundle
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 
-class CountryAutoCompleteText : AppCompatActivity() {
+class CountryAutoCompleteText : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.auto_complete_text)
+        initToolbar()
+
         val edit = findViewById<AutoCompleteTextView>(R.id.actv)
         val country = fillCountryList()
         val adapter = AutoCompleteCountryAdapter(this)
         adapter.addAll(country)
         edit.setAdapter(adapter)
 
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.auto_complete_text_toolbar))
+        supportActionBar?.title = "Auto Complete Text"
     }
 
     private fun fillCountryList(): List<CountryItem> {

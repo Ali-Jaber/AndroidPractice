@@ -3,12 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
+
+    <include
+        android:id="@+id/auto_complete_text_toolbar"
+        layout="@layout/toolbar" />
+
     <AutoCompleteTextView
         android:id="@+id/actv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16"
         android:completionThreshold="1"
-        android:hint="@string/select_country"/>
+        android:hint="@string/select_country"
+        android:padding="@dimen/dimen_16" />
 
 </LinearLayout>

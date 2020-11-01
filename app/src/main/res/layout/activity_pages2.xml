@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.Pages2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:id="@+id/page_tabLayout"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabTextColor="@android:color/black">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat"/>
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call"/>
+    </com.google.android.material.tabs.TabLayout>
+    
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

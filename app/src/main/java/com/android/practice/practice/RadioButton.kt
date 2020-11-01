@@ -9,12 +9,11 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 
-class RadioButton : AppCompatActivity() {
+class RadioButton : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_radio_button)
-
-        val linearLayout = findViewById<LinearLayout>(R.id.linearLayoutRadio)
+        initToolbar()
 
         val radioButton1 = RadioButton(this)
         radioButton1.layoutParams = LinearLayout.LayoutParams(
@@ -57,5 +56,10 @@ class RadioButton : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.radio_group_toolbar))
+        supportActionBar?.title = "Radio Group"
     }
 }

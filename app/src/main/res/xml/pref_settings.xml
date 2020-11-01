@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Category One">
+
+        <SwitchPreferenceCompat
+            android:key="pref_allow_notification"
+            android:title="Allow notification"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_notifications"/>
+
+        <EditTextPreference
+            android:key="pref_key_zipcode"
+            android:title="Zip code"
+            android:hint="Enter a 5 digits zip code"
+            android:inputType="text"
+            android:singleLine="true"
+            android:icon="@drawable/ic_edit_location"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Category Two">
+        <ListPreference
+            android:title="Unit"
+            android:key="pref_key_unit"
+            android:entryValues="@array/pref_unit_values"
+            android:entries="@array/pref_unit_options"
+            android:icon="@drawable/ic_edit_black"/>
+
+        <Preference
+            android:title="www.google.com"
+            android:icon="@drawable/ic_web_black_24dp">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.google.com/" />
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

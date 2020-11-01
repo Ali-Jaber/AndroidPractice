@@ -2,19 +2,29 @@ package com.android.practice.practice
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
+import android.view.View
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.android.practice.practice.Notifications.MyNotifications
-import com.android.practice.practice.recyclerview.UserRecyclerView
-import com.android.practice.practice.dialog.CustomAlertDialog
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
+import com.android.practice.practice.customview.CustomViewMain
 import com.android.practice.practice.customview.MyCustomView
+import com.android.practice.practice.dialog.CustomAlertDialog
 import com.android.practice.practice.dialog.MyBottomSheet
 import com.android.practice.practice.fragment.MainFragment
 import com.android.practice.practice.fragment.dialog.MyDialogFragment
+import com.android.practice.practice.fragment.fragmentinsidefragment.InsideFragment
 import com.android.practice.practice.fragment.fragmenttofragment.FragmentToFragment
 import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
+import com.android.practice.practice.pages.Pages2
+import com.android.practice.practice.pages.PagesActivity
+import com.android.practice.practice.recyclerview.UserRecyclerView
+import com.android.practice.practice.sharedpreferences.SharedPreferencesOne
+import com.android.practice.practice.sharedpreferences.SharedPreferencesPractice
 import com.android.practice.practice.spinner.SpinnerMain
 import com.android.practice.practice.viewpager.MyPager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,107 +34,154 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn1.setOnClickListener {
+        addButton("List View") {
             startActivity(Intent(this, ListView::class.java))
         }
 
-        btn2.setOnClickListener {
+        addButton("Recycler View") {
             startActivity(Intent(this, UserRecyclerView::class.java))
         }
 
-        btn3.setOnClickListener {
+        addButton("Collapsing Toolbar") {
             startActivity(Intent(this, CollapsingToolbar::class.java))
         }
 
-        btn4.setOnClickListener {
+        addButton("Drawer") {
             startActivity(Intent(this, Drawer::class.java))
         }
 
-        btn5.setOnClickListener {
+        addButton("Group Menu") {
             startActivity(Intent(this, GroupMenu::class.java))
         }
 
-        btn6.setOnClickListener {
+        addButton("Radio Button") {
             startActivity(Intent(this, RadioButton::class.java))
         }
 
-        btn7.setOnClickListener {
+        addButton("Spinner Main") {
             startActivity(Intent(this, SpinnerMain::class.java))
         }
+//        btn7.setOnClickListener {
+//            startActivity(Intent(this, SpinnerMain::class.java))
+//        }
 //        btn7.setOnClickListener {
 //            startActivity(Intent(this, Spinner::class.java))
 //        }
 
-        btn8.setOnClickListener {
+        addButton("Table Layout") {
             startActivity(Intent(this, TableLayout::class.java))
         }
 
-        btn9.setOnClickListener {
+        addButton("Scroll Vertical") {
             startActivity(Intent(this, ScrollVertical::class.java))
         }
 
-        btn10.setOnClickListener {
+        addButton("Scroll Horizontal") {
             startActivity(Intent(this, ScrollHorizontal::class.java))
         }
 
-        btn11.setOnClickListener {
+        addButton("Scroll Nested") {
             startActivity(Intent(this, ScrollNested::class.java))
         }
 
-        btn12.setOnClickListener {
+        addButton("Liner Layout") {
             startActivity(Intent(this, LinerLayout::class.java))
         }
 
-        btn13.setOnClickListener {
+        addButton("Relative Layout") {
             startActivity(Intent(this, RelativeLayout::class.java))
         }
 
-        btn14.setOnClickListener {
+        addButton("Coordinator Layout") {
             startActivity(Intent(this, CoordinatorLayout::class.java))
         }
 
-        btn15.setOnClickListener {
+        addButton("Country Auto Complete Text") {
             startActivity(Intent(this, CountryAutoCompleteText::class.java))
         }
 
-        btn16.setOnClickListener {
+        addButton("Custom Alert Dialog") {
             startActivity(Intent(this, CustomAlertDialog::class.java))
         }
 
-        btn17.setOnClickListener {
+        addButton("Notifications") {
             startActivity(Intent(this, MyNotifications::class.java))
         }
 
-        btn18.setOnClickListener {
+        addButton("Fragment") {
             startActivity(Intent(this, MainFragment::class.java))
         }
 
-        btn19.setOnClickListener {
+        addButton("Send from Activity to Fragment") {
             startActivity(Intent(this, MainTransferFragment::class.java))
         }
 
-        btn20.setOnClickListener {
+        addButton("Fragment To Fragment") {
             startActivity(Intent(this, FragmentToFragment::class.java))
         }
 
-        btn21.setOnClickListener {
+        addButton("fragment toolbar") {
             startActivity(Intent(this, FragmentToolBar::class.java))
         }
 
-        btn22.setOnClickListener {
+        addButton("Pager") {
             startActivity(Intent(this, MyPager::class.java))
         }
 
-        btn23.setOnClickListener {
+
+        addButton("Custom View") {
             startActivity(Intent(this, MyCustomView::class.java))
         }
 
-        btn24.setOnClickListener {
+        addButton("Dialog Fragment") {
             startActivity(Intent(this, MyDialogFragment::class.java))
         }
 
-        btn25.setOnClickListener {
+
+        addButton("Bottom Sheet") {
             startActivity(Intent(this, MyBottomSheet::class.java))
         }
+
+        addButton("Fragment Inside Fragment") {
+            startActivity(Intent(this, InsideFragment::class.java))
+        }
+
+        addButton("Pages") {
+            startActivity(Intent(this, PagesActivity::class.java))
+        }
+
+
+        addButton("Pages 2") {
+            startActivity(Intent(this, Pages2::class.java))
+        }
+
+        addButton("Custom View fro method") {
+            startActivity(Intent(this, CustomViewMain::class.java))
+        }
+
+        addButton("Shared Preferences To Activity") {
+            startActivity(Intent(this, SharedPreferencesOne::class.java))
+        }
+
+        addButton("Shared Preferences Practice") {
+            startActivity(Intent(this, SharedPreferencesPractice::class.java))
+        }
+
+    }
+
+    private fun addButton(btnName: String, onClick: View.OnClickListener) {
+        val layoutParams: LinearLayout.LayoutParams =
+            LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            )
+        layoutParams.setMargins(0, 8, 0, 0)
+        val btn = Button(this)
+        btn.text = btnName
+        btn.setOnClickListener(onClick)
+        btn.gravity = Gravity.CENTER
+        btn.layoutParams = layoutParams
+        btn.setPadding(8, 8, 8, 8)
+        mainLinear.addView(btn)
     }
 }

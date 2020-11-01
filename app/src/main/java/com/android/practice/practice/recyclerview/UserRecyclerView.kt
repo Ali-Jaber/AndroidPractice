@@ -8,14 +8,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 
-class UserRecyclerView : AppCompatActivity() {
+class UserRecyclerView : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
-
+        initToolbar()
         val users = listOf(
             User("Elon Musk", R.drawable.person8, "38 minutes ago", R.drawable.post12),
             User("Test 1", R.drawable.person1, "38 minutes ago", R.drawable.post1),
@@ -55,5 +56,9 @@ class UserRecyclerView : AppCompatActivity() {
         }
         myRecyclerView.adapter = customAdapter
         customAdapter.addAll(users)
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.recycler_view_toolbar))
     }
 }

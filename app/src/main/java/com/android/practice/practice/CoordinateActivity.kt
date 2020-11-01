@@ -13,7 +13,7 @@ class CoordinateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val countries = resources.getStringArray(R.array.countries)
-        val arrayAdapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,countries)
+        val arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,countries)
         autoCompleteTextView.setAdapter(arrayAdapter)
         fba.setOnClickListener {
             Snackbar.make(rootLayout, "Floating Action Button", Snackbar.LENGTH_LONG).show()

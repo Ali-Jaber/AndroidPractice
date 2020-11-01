@@ -10,14 +10,19 @@ import android.view.MenuItem
 import android.widget.TextView
 import java.util.*
 
-lateinit var myTextView: TextView
 
-class GroupMenu : AppCompatActivity() {
+class GroupMenu : BaseActivity() {
+    lateinit var myTextView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_menu)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        initToolbar()
         myTextView = findViewById(R.id.tv)
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.menu_group_toolbar))
+        supportActionBar?.title = "Group Menu"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -64,7 +69,7 @@ class GroupMenu : AppCompatActivity() {
         when (item.itemId) {
             R.id.large_text -> {
                 item.isCheckable = true
-                myTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP,50F);
+                myTextView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 50F);
             }
 
             R.id.medium_text -> {

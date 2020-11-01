@@ -7,7 +7,6 @@
     android:orientation="vertical"
     tools:context=".dialog.CustomAlertDialog">
 
-
     <Button
         android:id="@+id/btSimpleAlert"
         android:layout_width="@dimen/one_hundred_fifty"

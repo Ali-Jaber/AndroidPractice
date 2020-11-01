@@ -14,9 +14,10 @@ import android.os.Bundle
 
 import android.widget.Button
 import android.widget.RemoteViews
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 
-class MyNotifications : AppCompatActivity() {
+class MyNotifications : BaseActivity() {
 
     lateinit var notificationManager: NotificationManager
     lateinit var notificationChannel: NotificationChannel
@@ -27,7 +28,7 @@ class MyNotifications : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_notifications)
-
+        initToolbar()
         val btn = findViewById<Button>(R.id.btn)
 
         notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -79,6 +80,11 @@ class MyNotifications : AppCompatActivity() {
             notificationManager.notify(1234, builder.build())
         }
 
+    }
+
+    override fun initToolbar() {
+        setSupportActionBar(findViewById(R.id.notifications_toolbar))
+        supportActionBar?.title = "Notifications"
     }
 
 
