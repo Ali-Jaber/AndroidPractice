@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, Pages2::class.java))
         }
 
-        addButton("Custom View fro method") {
+        addButton("Custom View") {
             startActivity(Intent(this, CustomViewMain::class.java))
         }
 
@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MainSettingsActivity::class.java))
         }
 
-        addButton("NotificationsExample") {
+        addButton("Create Notifications") {
             startActivity(Intent(this, NotificationsExample::class.java))
         }
 
