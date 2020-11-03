@@ -12,6 +12,7 @@ class MyPager : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_pager)
         initToolbar()
+        title = "View Pager"
         val tabLayout = findViewById<TabLayout>(R.id.main_tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.main_pager)
         val adapter = PagerAdapter(supportFragmentManager).apply {
@@ -56,12 +57,6 @@ class MyPager : BaseActivity() {
                 Toast.makeText(applicationContext, "onPageScrollStateChanged", Toast.LENGTH_SHORT)
                     .show()
             }
-
         })
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.pager_toolbar))
-        supportActionBar?.title = "View Pager"
     }
 }

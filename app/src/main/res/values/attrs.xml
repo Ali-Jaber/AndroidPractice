@@ -11,4 +11,9 @@
             <enum name="sad" value="1" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="BenefitView">
+        <attr name="image" format="reference"/>
+        <attr name="text" format="string"/>
+    </declare-styleable>
 </resources>

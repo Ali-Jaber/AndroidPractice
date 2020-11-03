@@ -22,6 +22,7 @@ class SharedPreferencesPractice : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preferences_practice)
         initToolbar()
+        title = "Shared Preferences Practice"
         et_username = findViewById(R.id.et_name)
         et_email = findViewById(R.id.et_email)
         et_birthDate = findViewById(R.id.et_birthDate)
@@ -69,12 +70,6 @@ class SharedPreferencesPractice : BaseActivity() {
         edit.putString(EMAIL_KEY, email)
         edit.putString(BIRTHDATE_KEY, birthDate)
         edit.apply()
-    }
-
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.shared_preferences_toolbar))
-        supportActionBar?.title = "Shared Preferences Practice"
     }
 
     companion object {

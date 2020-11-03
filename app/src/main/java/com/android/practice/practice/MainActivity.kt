@@ -8,7 +8,9 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.android.practice.practice.Notifications.MyNotifications
+import com.android.practice.practice.Notifications.NotificationsExample
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
+import com.android.practice.practice.customview.BenefitActivity
 import com.android.practice.practice.customview.CustomViewMain
 import com.android.practice.practice.customview.MyCustomView
 import com.android.practice.practice.dialog.CustomAlertDialog
@@ -23,8 +25,10 @@ import com.android.practice.practice.listview.ListView
 import com.android.practice.practice.pages.Pages2
 import com.android.practice.practice.pages.PagesActivity
 import com.android.practice.practice.recyclerview.UserRecyclerView
+import com.android.practice.practice.room.RoomActivity
 import com.android.practice.practice.sharedpreferences.SharedPreferencesOne
 import com.android.practice.practice.sharedpreferences.SharedPreferencesPractice
+import com.android.practice.practice.sharedpreferences.preferencefragment.MainSettingsActivity
 import com.android.practice.practice.spinner.SpinnerMain
 import com.android.practice.practice.viewpager.MyPager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -165,6 +169,22 @@ class MainActivity : AppCompatActivity() {
 
         addButton("Shared Preferences Practice") {
             startActivity(Intent(this, SharedPreferencesPractice::class.java))
+        }
+
+        addButton("Fragment Preferences") {
+            startActivity(Intent(this, MainSettingsActivity::class.java))
+        }
+
+        addButton("NotificationsExample") {
+            startActivity(Intent(this, NotificationsExample::class.java))
+        }
+
+        addButton("Custom View") {
+            startActivity(Intent(this, BenefitActivity::class.java))
+        }
+
+        addButton("Posts with Room") {
+            startActivity(Intent(this, RoomActivity::class.java))
         }
 
     }

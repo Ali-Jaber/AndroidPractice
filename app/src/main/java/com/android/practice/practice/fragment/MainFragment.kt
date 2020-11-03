@@ -14,6 +14,7 @@ class MainFragment : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_fragment)
         initToolbar()
+        title = "Fragment"
         val btnX = findViewById<Button>(R.id.main_btn_x)
         val btnY = findViewById<Button>(R.id.main_btn_y)
 
@@ -30,11 +31,6 @@ class MainFragment : BaseActivity() {
                 setupFragment()
             }
         }
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.main_fragment_toolbar))
-        supportActionBar?.title = "Fragment"
     }
 
     private fun setupFragment() {

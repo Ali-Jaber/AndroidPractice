@@ -11,14 +11,10 @@ class InsideFragment : BaseActivity(), ParentFragment.OnFragmentInteractionListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inside)
         initToolbar()
+        title = "Fragment Inside Fragment"
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.parent_fragment_container, ParentFragment())
         ft.commit()
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.fragment_inside_fragment_toolbar))
-        supportActionBar?.title = "Fragment Inside Fragment"
     }
 
     override fun messageFromParentFragmentToActivity(myString: String) {

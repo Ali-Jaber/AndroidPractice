@@ -25,6 +25,7 @@ class Pages2 : BaseActivity() {
         setContentView(R.layout.activity_pages2)
         toolbar = findViewById(R.id.page_toolbar)
         initToolbar()
+        title = "TabLayout"
 
         tabLayout = findViewById(R.id.page_tabLayout)
         tabCall = findViewById(R.id.tabCall)
@@ -89,10 +90,5 @@ class Pages2 : BaseActivity() {
             }
         })
         viewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.page_toolbar))
-        supportActionBar?.title = "TabLayout"
     }
 }

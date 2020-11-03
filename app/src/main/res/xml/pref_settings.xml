@@ -31,7 +31,7 @@
 
         <Preference
             android:title="www.google.com"
-            android:icon="@drawable/ic_web_black_24dp">
+            android:icon="@drawable/ic_web">
             <intent android:action="android.intent.action.VIEW"
                 android:data="https://www.google.com/" />
         </Preference>

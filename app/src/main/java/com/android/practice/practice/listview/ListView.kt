@@ -16,6 +16,7 @@ class ListView : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
         initToolbar()
+        title = "List View"
         val fruitsList = listOf(
             Fruits("Apple", "desc 01", R.drawable.apple),
             Fruits("Apricot", "desc 02", R.drawable.apricots),
@@ -37,10 +38,5 @@ class ListView : BaseActivity() {
             }
 
 
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.list_view_toolbar))
-        supportActionBar?.title = "List View"
     }
 }

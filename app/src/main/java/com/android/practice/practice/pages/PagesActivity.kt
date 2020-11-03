@@ -18,17 +18,12 @@ class PagesActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pages)
         initToolbar()
+        title = "Pages"
         val adapter = PagerAdapter(supportFragmentManager)
         adapter.addTab(MyTab("F1", F1()))
         adapter.addTab(MyTab("F2", F2()))
         viewPage.adapter = adapter
     }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.toolbar))
-        title = "Pages"
-    }
-
 }
 
 class F1 : Fragment() {

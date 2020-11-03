@@ -8,10 +8,6 @@ class ScrollHorizontal : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.scroll_view_horizontal)
         initToolbar()
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.scroll_horizontal_toolbar))
-        supportActionBar?.title = "Scroll Horizontal"
+        title = "Scroll Horizontal"
     }
 }

@@ -11,6 +11,7 @@ class CountryAutoCompleteText : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.auto_complete_text)
         initToolbar()
+        title = "Auto Complete Text"
 
         val edit = findViewById<AutoCompleteTextView>(R.id.actv)
         val country = fillCountryList()
@@ -18,11 +19,6 @@ class CountryAutoCompleteText : BaseActivity() {
         adapter.addAll(country)
         edit.setAdapter(adapter)
 
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.auto_complete_text_toolbar))
-        supportActionBar?.title = "Auto Complete Text"
     }
 
     private fun fillCountryList(): List<CountryItem> {

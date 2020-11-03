@@ -57,8 +57,4 @@ class UserRecyclerView : BaseActivity() {
         myRecyclerView.adapter = customAdapter
         customAdapter.addAll(users)
     }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.recycler_view_toolbar))
-    }
 }

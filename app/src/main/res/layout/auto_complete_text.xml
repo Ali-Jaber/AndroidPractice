@@ -5,7 +5,6 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/auto_complete_text_toolbar"
         layout="@layout/toolbar" />
 
     <AutoCompleteTextView

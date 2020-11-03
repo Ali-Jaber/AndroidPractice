@@ -17,12 +17,8 @@ class GroupMenu : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_menu)
         initToolbar()
+        title = "Group Menu"
         myTextView = findViewById(R.id.tv)
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.menu_group_toolbar))
-        supportActionBar?.title = "Group Menu"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

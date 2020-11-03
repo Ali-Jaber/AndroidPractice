@@ -8,10 +8,6 @@ class CoordinatorLayout : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.coordinate_layout)
         initToolbar()
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.coordinator_toolbar))
-        supportActionBar?.title = "Coordinator Layout"
+        title = "Coordinator Layout"
     }
 }

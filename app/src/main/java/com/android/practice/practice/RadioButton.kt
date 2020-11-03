@@ -14,6 +14,7 @@ class RadioButton : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_radio_button)
         initToolbar()
+        title = "Radio Group"
 
         val radioButton1 = RadioButton(this)
         radioButton1.layoutParams = LinearLayout.LayoutParams(
@@ -56,10 +57,5 @@ class RadioButton : BaseActivity() {
             }
         }
 
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.radio_group_toolbar))
-        supportActionBar?.title = "Radio Group"
     }
 }

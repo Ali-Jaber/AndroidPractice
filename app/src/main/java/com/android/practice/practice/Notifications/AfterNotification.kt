@@ -10,10 +10,6 @@ class AfterNotification : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_after_notification)
         initToolbar()
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.after_notification))
-        supportActionBar?.title = "After Notification"
+        title = "After Notification"
     }
 }

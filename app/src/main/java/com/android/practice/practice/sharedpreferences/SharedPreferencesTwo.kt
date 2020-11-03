@@ -13,6 +13,7 @@ class SharedPreferencesTwo : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preferences_two)
         initToolbar()
+        title = "Shared Preferences Activity 2"
         val sharedPreferences = getSharedPreferences("emails", MODE_PRIVATE)
 
 
@@ -20,10 +21,5 @@ class SharedPreferencesTwo : BaseActivity() {
             val email = sharedPreferences.getString("email", "No Email Available")
             Toast.makeText(this@SharedPreferencesTwo, email, Toast.LENGTH_SHORT).show()
         }
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.shared_preferences_two))
-        supportActionBar?.title = "Shared Preferences Activity 2"
     }
 }

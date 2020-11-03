@@ -8,10 +8,6 @@ class RelativeLayout : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.relative_layout)
         initToolbar()
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.relative_toolbar))
-        supportActionBar?.title = "Relative Layout"
+        title = "Relative Layout"
     }
 }

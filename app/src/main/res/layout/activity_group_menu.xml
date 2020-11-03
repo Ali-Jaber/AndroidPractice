@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".GroupMenu">
 
-    <include
-        android:id="@+id/menu_group_toolbar"
-        layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
 
     <TextView
@@ -16,9 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
         android:text="@string/change_text"
         android:textSize="@dimen/group_menu_text_size"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif-condensed" />
+        android:textStyle="bold" />
 </RelativeLayout>

@@ -6,9 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".listview.ListView">
 
-    <include
-        android:id="@+id/list_view_toolbar"
-        layout="@layout/toolbar" />
+    <include layout="@layout/toolbar" />
 
     <ListView
         android:id="@+id/myListView"

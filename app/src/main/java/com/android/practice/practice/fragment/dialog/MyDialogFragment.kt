@@ -12,16 +12,12 @@ class MyDialogFragment : BaseActivity(), OnPositiveClickListener, OnNegativeClic
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_dialog_fragment)
         initToolbar()
+        title = "Dialog Fragment"
         btn_show.setOnClickListener {
             val fragment =
                 DialogFragmentImpl.newInstance("Confirmation", "Are you sure", R.drawable.ic_info)
             fragment.show(supportFragmentManager, null)
         }
-    }
-
-    override fun initToolbar() {
-        setSupportActionBar(findViewById(R.id.dialog_toolbar))
-        supportActionBar?.title = "Dialog Fragment"
     }
 
     override fun onPositiveButtonClicked() {

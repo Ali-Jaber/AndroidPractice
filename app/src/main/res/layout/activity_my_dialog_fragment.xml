@@ -7,7 +7,6 @@
     tools:context=".fragment.dialog.MyDialogFragment">
 
     <include
-        android:id="@+id/dialog_toolbar"
         layout="@layout/toolbar"/>
     <Button
         android:id="@+id/btn_show"
