@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_public"
+        android:title="Publication" />
+
+    <item
+        android:id="@+id/nav_store"
+        android:title="Android Store" />
+
+    <item
+        android:id="@+id/nav_news"
+        android:title="Newsletter" />
+
+    <item
+        android:id="@+id/nav_join"
+        android:title="Join Community" />
+
+    <item
+        android:id="@+id/nav_contact"
+        android:title="Contact Us" />
+</menu>

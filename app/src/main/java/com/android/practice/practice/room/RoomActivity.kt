@@ -19,7 +19,7 @@ class RoomActivity : BaseActivity() {
         val adapter = PostsAdapter()
         posts_recyclerView.adapter = adapter
 
-        val postsDatabase = PostsDatabase.getDatabase(this)
+        val postsDatabase = PostsDatabase.DatabaseBuilder.getDatabase(this)
 
         insertButton.setOnClickListener {
             postsDatabase.postDao().insertPost(
@@ -32,15 +32,12 @@ class RoomActivity : BaseActivity() {
                 .subscribeOn(Schedulers.computation())
                 .subscribe(object : CompletableObserver {
                     override fun onSubscribe(d: Disposable) {
-                        TODO("Not yet implemented")
                     }
 
                     override fun onComplete() {
-                        TODO("Not yet implemented")
                     }
 
                     override fun onError(e: Throwable) {
-                        TODO("Not yet implemented")
                     }
 
                 })
@@ -52,21 +49,16 @@ class RoomActivity : BaseActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(object : SingleObserver<List<Post>> {
 
-
                     override fun onSuccess(posts: List<Post>) {
                         adapter.setList(posts)
                         adapter.notifyDataSetChanged()
                     }
 
                     override fun onSubscribe(d: Disposable) {
-                        TODO("Not yet implemented")
                     }
 
                     override fun onError(e: Throwable) {
-                        TODO("Not yet implemented")
                     }
-
-
                 })
         }
     }

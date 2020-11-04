@@ -9,6 +9,8 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/send"
         android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_marginTop="@dimen/eight_dp"
         android:layout_height="wrap_content"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,10 +23,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:importantForAutofill="no"
         android:inputType="text"
+        android:layout_marginTop="@dimen/eight_dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

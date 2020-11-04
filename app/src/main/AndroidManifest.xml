@@ -8,10 +8,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".room.RoomActivity"></activity>
-        <activity android:name=".Notifications.NotificationsExample" />
-        <activity android:name=".customview.BenefitActivity" />
-        <activity android:name=".customview.BenefitView" />
+        <activity android:name=".Drawer2"></activity>
+        <activity android:name=".notifications.MultipleNotificationsChannel" />
+        <activity android:name=".room.RoomActivity" />
+        <activity android:name=".notifications.NotificationsExample" />
+        <activity android:name=".customview.BenefitActivity" /> <!-- <activity android:name=".customview.BenefitView" /> -->
         <activity android:name=".sharedpreferences.preferencefragment.MainSettingsActivity" />
         <activity
             android:name=".sharedpreferences.preferencefragment.SettingsActivity"
@@ -37,7 +38,7 @@
         <activity android:name=".GroupMenu" />
         <activity android:name=".MenuBar" />
         <activity android:name=".CollapsingToolbar" />
-        <activity android:name=".Drawer" />
+        <activity android:name=".MyDrawer" />
         <activity android:name=".recyclerview.UserRecyclerView" />
         <activity android:name=".listview.ListView" />
         <activity android:name=".Spinner" />
@@ -53,8 +54,8 @@
         <activity android:name=".spinner.SpinnerMain" />
         <activity android:name=".autocompletetext.CountryAutoCompleteText" />
         <activity android:name=".dialog.CustomAlertDialog" />
-        <activity android:name=".Notifications.AfterNotification" />
-        <activity android:name=".Notifications.MyNotifications" />
+        <activity android:name=".notifications.AfterNotification" />
+        <activity android:name=".notifications.MyNotifications" />
         <activity android:name=".fragment.transferdata.MainTransferFragment" />
         <activity android:name=".fragment.MainFragment" />
         <activity android:name=".fragment.fragmenttofragment.FragmentToFragment" />

@@ -7,8 +7,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.android.practice.practice.Notifications.MyNotifications
-import com.android.practice.practice.Notifications.NotificationsExample
+import com.android.practice.practice.notifications.MyNotifications
+import com.android.practice.practice.notifications.NotificationsExample
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
 import com.android.practice.practice.customview.BenefitActivity
 import com.android.practice.practice.customview.CustomViewMain
@@ -22,6 +22,7 @@ import com.android.practice.practice.fragment.fragmenttofragment.FragmentToFragm
 import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
+import com.android.practice.practice.notifications.MultipleNotificationsChannel
 import com.android.practice.practice.pages.Pages2
 import com.android.practice.practice.pages.PagesActivity
 import com.android.practice.practice.recyclerview.UserRecyclerView
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         addButton("Drawer") {
-            startActivity(Intent(this, Drawer::class.java))
+            startActivity(Intent(this, Drawer2::class.java))
         }
 
         addButton("Group Menu") {
@@ -185,6 +186,10 @@ class MainActivity : AppCompatActivity() {
 
         addButton("Posts with Room") {
             startActivity(Intent(this, RoomActivity::class.java))
+        }
+
+        addButton("Notification") {
+            startActivity(Intent(this, MultipleNotificationsChannel::class.java))
         }
 
     }

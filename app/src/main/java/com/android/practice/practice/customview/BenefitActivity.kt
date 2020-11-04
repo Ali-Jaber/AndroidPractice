@@ -7,22 +7,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R
 import kotlinx.android.synthetic.main.activity_benefit.*
 import kotlinx.android.synthetic.main.benefit_view.*
+import kotlinx.android.synthetic.main.benefit_view.view.*
 
-class BenefitActivity : AppCompatActivity() {
+class BenefitActivity : BaseActivity() {
 
+    private var listView: ListView? = null
+    private var title: TextView? = null
     private val selectedItems: MutableList<String> = ArrayList()
     private var allItems: MutableList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_benefit)
-        var listView: ListView = findViewById(R.id.lv)
-        var title: TextView = findViewById(R.id.et)
-        send.setOnClickListener {
-            val selectedString = et.text.trim().toString()
+        initToolbar()
+        setTitle("My Custom View")
+        listView = findViewById(R.id.lv)
+        title = findViewById(R.id.et)
+        my_custom_view.send.setOnClickListener {
+            val selectedString = my_custom_view.et.text.trim().toString()
 
             when {
                 selectedString.isEmpty() -> Toast.makeText(

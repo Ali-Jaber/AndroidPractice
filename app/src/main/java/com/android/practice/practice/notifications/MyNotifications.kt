@@ -1,6 +1,5 @@
-package com.android.practice.practice.Notifications
+package com.android.practice.practice.notifications
 
-import androidx.appcompat.app.AppCompatActivity
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -14,8 +13,6 @@ import android.os.Bundle
 
 import android.widget.Button
 import android.widget.RemoteViews
-import android.widget.Toolbar
-import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.BaseActivity2
 import com.android.practice.practice.R
 

@@ -1,6 +1,5 @@
-package com.android.practice.practice.Notifications
+package com.android.practice.practice.notifications
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.android.practice.practice.BaseActivity
 import com.android.practice.practice.R

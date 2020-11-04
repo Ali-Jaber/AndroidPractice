@@ -7,22 +7,28 @@
     tools:context=".customview.BenefitActivity">
 
 
+    <include
+        android:id="@id/toolbarXml"
+        layout="@layout/toolbar" />
+
     <com.android.practice.practice.customview.BenefitView
-        android:id="@+id/des"
-        android:layout_width="wrap_content"
+        android:id="@+id/my_custom_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:image="@drawable/ic_send"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_send"
-        app:text="Apply and chat with our hosts" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarXml"
+        android:layout_marginTop="@dimen/eight_dp"
+        app:text="Enter Text" />
 
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/des" />
+        app:layout_constraintTop_toBottomOf="@+id/my_custom_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
