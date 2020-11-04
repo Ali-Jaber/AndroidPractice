@@ -19,7 +19,6 @@ class MyDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
         setContentView(R.layout.activity_drawer)
         toggleButton = ActionBarDrawerToggle(this, drawer_layout, R.string.open, R.string.close)
         toggleButton.isDrawerIndicatorEnabled = true
-        toggleButton.
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
