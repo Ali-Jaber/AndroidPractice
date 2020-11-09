@@ -12,4 +12,7 @@
     <color name="yellow">#FFC107</color>
     <color name="orange">#FFA000</color>
     <color name="greenDark">#009688</color>
+    <color name="green">#A0B0</color>
+    <color name="jd_red">#CB0000</color>
+    <color name="jd_light">#E5001F</color>
 </resources>

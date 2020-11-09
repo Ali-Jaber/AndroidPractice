@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyStyleOne">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="MyStyleTwo" parent="@android:style/TextAppearance">
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#00FF00</item>
+    </style>
+
+
+    <style name="style_one">
+        <item name="android:textColor">#C51162</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_one.style_two">
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">#795548</item>
+    </style>
+
+    <style name="style_one.style_two.style_three">
+        <item name="android:textColor">#76FF03</item>
+        <item name="android:background">#004D40</item>
+    </style>
+
+</resources>

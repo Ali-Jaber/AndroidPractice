@@ -7,12 +7,12 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.android.practice.practice.notifications.MyNotifications
-import com.android.practice.practice.notifications.NotificationsExample
 import com.android.practice.practice.autocompletetext.CountryAutoCompleteText
+import com.android.practice.practice.broadcastreceiver.MyReciverActivity
 import com.android.practice.practice.customview.BenefitActivity
 import com.android.practice.practice.customview.CustomViewMain
 import com.android.practice.practice.customview.MyCustomView
+import com.android.practice.practice.deeplinks.MyDeepLinkActivity
 import com.android.practice.practice.dialog.CustomAlertDialog
 import com.android.practice.practice.dialog.MyBottomSheet
 import com.android.practice.practice.fragment.MainFragment
@@ -23,10 +23,16 @@ import com.android.practice.practice.fragment.toolbar.FragmentToolBar
 import com.android.practice.practice.fragment.transferdata.MainTransferFragment
 import com.android.practice.practice.listview.ListView
 import com.android.practice.practice.notifications.MultipleNotificationsChannel
+import com.android.practice.practice.notifications.MyNotifications
+import com.android.practice.practice.notifications.NotificationsExample
 import com.android.practice.practice.pages.Pages2
 import com.android.practice.practice.pages.PagesActivity
 import com.android.practice.practice.recyclerview.UserRecyclerView
 import com.android.practice.practice.room.RoomActivity
+import com.android.practice.practice.service.background.StartServiceActivity
+import com.android.practice.practice.service.foreground.StartForegroundService
+import com.android.practice.practice.service.jobservice.MyJobActivity
+import com.android.practice.practice.shape.MyDrawableActivity
 import com.android.practice.practice.sharedpreferences.SharedPreferencesOne
 import com.android.practice.practice.sharedpreferences.SharedPreferencesPractice
 import com.android.practice.practice.sharedpreferences.preferencefragment.MainSettingsActivity
@@ -190,6 +196,34 @@ class MainActivity : AppCompatActivity() {
 
         addButton("Notification") {
             startActivity(Intent(this, MultipleNotificationsChannel::class.java))
+        }
+
+        addButton("Background Service") {
+            startActivity(Intent(this, StartServiceActivity::class.java))
+        }
+
+        addButton("Foreground Service") {
+            startActivity(Intent(this, StartForegroundService::class.java))
+        }
+
+        addButton("Job Service") {
+            startActivity(Intent(this, MyJobActivity::class.java))
+        }
+
+        addButton("Brodcast") {
+            startActivity(Intent(this, MyReciverActivity::class.java))
+        }
+
+        addButton("Deep Link") {
+            startActivity(Intent(this, MyDeepLinkActivity::class.java))
+        }
+
+        addButton("Style Inheritance") {
+            startActivity(Intent(this, StyleInheritanceActivity::class.java))
+        }
+
+        addButton("Drawable") {
+            startActivity(Intent(this, MyDrawableActivity::class.java))
         }
 
     }

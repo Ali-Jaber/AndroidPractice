@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav">
+
+    <fragment
+        android:id="@+id/home_nav"
+        android:name="com.android.practice.practice.deeplinks.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="homeId"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink1"
+            app:uri="http://goobar.io/home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_post"
+        android:name="com.android.practice.practice.deeplinks.PostFragment"
+        android:label="@string/post"
+        tools:layout="@layout/fragment_post">
+        <argument
+            android:name="postId"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="http://goobar.io/posts" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="http://goobar.io/posts/{postId}" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_category"
+        android:name="com.android.practice.practice.deeplinks.PostFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_category2">
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="http://goobar.io/categories" />
+        <deepLink
+            android:id="@+id/deepLink4"
+            app:uri="http://goobar.io/categories/{categoryId}" />
+    </fragment>
+</navigation>

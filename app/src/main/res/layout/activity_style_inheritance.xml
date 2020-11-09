@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StyleInheritanceActivity">
+
+    <include
+        android:id="@id/toolbarXml"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tv_style1"
+        style="@style/MyStyleOne"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:paddingTop="@dimen/eight_dp"
+        android:text="@string/text_view_inheritance"
+        android:textColor="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarXml" />
+
+    <TextView
+        android:id="@+id/tv_style2"
+        style="@style/MyStyleTwo"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:paddingTop="@dimen/eight_dp"
+        android:text="@string/override_text_appearance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style1" />
+
+
+    <TextView
+        android:id="@+id/tv_style3"
+        style="@style/style_one"
+        android:layout_marginTop="24dp"
+        android:text="Style one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style2" />
+
+    <TextView
+        android:id="@+id/tv_style4"
+        style="@style/style_one.style_two"
+        android:layout_marginTop="24dp"
+        android:text="Style Two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style3" />
+
+    <TextView
+        android:id="@+id/tv_style5"
+        style="@style/style_one.style_two.style_three"
+        android:layout_marginTop="24dp"
+        android:text="Style Three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style4" />
+
+    <Button
+        android:id="@+id/btn_style"
+        style="@style/style_one"
+        android:layout_marginTop="32dp"
+        android:text="Style With Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_style5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

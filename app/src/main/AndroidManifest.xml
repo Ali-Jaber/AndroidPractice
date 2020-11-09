@@ -2,13 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.practice.practice">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Drawer2"></activity>
+        <activity android:name=".shape.MyDrawableActivity"></activity>
+        <activity android:name=".StyleInheritanceActivity" />
+        <activity android:name=".deeplinks.MyDeepLinkActivity" />
+        <activity android:name=".broadcastreceiver.MyReciverActivity" />
+
+        <service
+            android:name=".service.jobservice.MyJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".service.jobservice.MyJobActivity" />
+        <activity android:name=".service.foreground.StartForegroundService" /> <!-- <service -->
+        <!-- android:name=".service.foreground.MyIntentService" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity android:name=".service.foreground.ForegroundActivity" /> -->
+        <activity android:name=".service.background.StartServiceActivity" />
+
+        <service
+            android:name=".service.background.BackgroundService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".Drawer2" />
         <activity android:name=".notifications.MultipleNotificationsChannel" />
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".notifications.NotificationsExample" />
@@ -63,6 +89,16 @@
         <activity android:name=".viewpager.MyPager" />
         <activity android:name=".fragment.dialog.MyDialogFragment" />
         <activity android:name=".fragment.fragmentinsidefragment.InsideFragment" />
+
+        <receiver
+            android:name=".broadcastreceiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.practice.practice.one" />
+                <action android:name="com.android.practice.practice.two" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
